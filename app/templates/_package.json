@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "name": "<%= name%>",
+  "scripts": {
+    "start": "browser-sync start --server --files *.html"
+  },
+  "license": "MIT"
+}
