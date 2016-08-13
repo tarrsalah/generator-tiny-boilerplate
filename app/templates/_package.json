@@ -1,8 +1,13 @@
 {
-  "private": true,
-  "name": "<%= name%>",
-  "scripts": {
-    "start": "browser-sync start --server --files *.html"
-  },
-  "license": "MIT"
+    "private": true,
+    "name": "<%= name%>",
+    "scripts": {
+        "serve": "browser-sync start --server --files *.html *.min.js *.min.css",
+        "script": "browserify -e ./script.js -o script.min.js",
+        "watch:script": "onchange -i script.js -- npm run script",
+        "style": "postcss --use autoprefixer ./style.css -o style.min.css",
+        "watch:style": "onchange -i style.css -- npm run style",
+        "start": "npm-run-all -p serve watch:script watch:style"
+    },
+    "license": "MIT"
 }

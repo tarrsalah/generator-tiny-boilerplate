@@ -1,0 +1,23 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: Helvetica;
+    width: 80%;
+    margin: 2rem auto;
+    padding: 1rem;
+    min-height: 70vh;
+    border: solid 1px #aaa;
+}
+
+
+h1 {
+    text-align: center;
+    color: #333
+}
