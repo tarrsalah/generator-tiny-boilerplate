@@ -1,10 +1,10 @@
-var generators = require('yeoman-generator');
+var generator = require('yeoman-generator');
 var yosay = require('yosay');
 var path= require('path');
 
-module.exports  = generators.Base.extend({
+module.exports  = generator.Base.extend({
   constructor: function() {
-    generators.Base.apply(this, arguments);
+    generator.Base.apply(this, arguments);
 
     this.option('skip-welcome-message', {
       desc: 'skip the welcome message',
