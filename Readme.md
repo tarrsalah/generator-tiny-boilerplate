@@ -3,6 +3,9 @@
 Tiny html/css/(javascript*) [Yeoman](http://yeoman.io) generator.
 
 
+[![NPM](https://nodei.co/npm/generator-tiny-boilerplate.png)](https://npmjs.org/package/generator-tiny-boilerplate)
+
+
 ## Installation
 
 * Ensure that you have [Yeoman](http://yeoman.io) installed globally:
