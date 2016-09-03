@@ -1,9 +1,8 @@
 # generator-tiny-boilerplate
 
-Tiny html/css/(javascript*) [Yeoman](http://yeoman.io) generator.
-
-
 [![NPM](https://nodei.co/npm/generator-tiny-boilerplate.png)](https://npmjs.org/package/generator-tiny-boilerplate)
+
+Tiny frontend [Yeoman](http://yeoman.io) generator.
 
 
 ## Installation
