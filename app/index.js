@@ -50,7 +50,7 @@ module.exports  = generator.Base.extend({
   writing: {
     packageJSON: function() {
       this.fs.copyTpl(
-        this.templatePath('_package.json'),
+        this.templatePath('package.json'),
         this.destinationPath('package.json'), {
           'name': this.projectName
         }

@@ -4,8 +4,8 @@
   "scripts": {
     "serve": "browser-sync start --server --files *.html *.min.js *.min.css",
     "style": "postcss -c postcss.json style.css -o style.min.css",
-    "script": "browserify -e ./script.js -o script.min.js",
     "watch:style": "onchange -i style.css -- npm run style",
+    "script": "browserify -e ./script.js -o script.min.js",
     "watch:script": "onchange -i script.js -- npm run script",
     "start": "npm-run-all -p serve watch:script watch:style"
   },
