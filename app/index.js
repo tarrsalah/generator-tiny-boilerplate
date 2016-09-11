@@ -56,58 +56,75 @@ module.exports  = generator.Base.extend({
         }
       );
     },
+
+    postCcss: function() {
+      this.fs.copyTpl(
+        this.templatePath('postcss.json'),
+        this.destinationPath('postcss.json')
+      );
+    },
+
     makefile: function() {
       this.fs.copyTpl(
         this.templatePath('Makefile'),
         this.destinationPath('Makefile')
       );
     },
-        gitignore: function() {
-          this.fs.copyTpl(
-            this.templatePath('gitignore'),
-            this.destinationPath('.gitignore')
-          );
-        },
-        projectile: function() {
-          this.fs.copyTpl(
-            this.templatePath('projectile'),
-            this.destinationPath('.projectile')
-          );
-        },
-        tern: function() {
-          this.fs.copyTpl(
-            this.templatePath('tern-project'),
-            this.destinationPath('.tern-project')
-          );
-        },
-        html: function() {
-          this.fs.copyTpl(
-            this.templatePath('index.html'),
-            this.destinationPath('index.html'), {
-              'title': this.projectTitle
-            }
-          );
-        },
-        script: function() {
-          this.fs.copyTpl(
-            this.templatePath('script.js'),
-            this.destinationPath('script.js'), {
-              'title': this.projectTitle
-            }
-          );
-        },
-        style: function() {
-          this.fs.copyTpl(
-            this.templatePath('style.less'),
-            this.destinationPath('style.less')
-          );
-        },
-        },
+
+    gitignore: function() {
+      this.fs.copyTpl(
+        this.templatePath('gitignore'),
+        this.destinationPath('.gitignore')
+      );
+    },
+
+    projectile: function() {
+      this.fs.copyTpl(
+        this.templatePath('projectile'),
+        this.destinationPath('.projectile')
+      );
+    },
+
+    tern: function() {
+      this.fs.copyTpl(
+        this.templatePath('tern-project'),
+        this.destinationPath('.tern-project')
+      );
+    },
+
+    html: function() {
+      this.fs.copyTpl(
+        this.templatePath('index.html'),
+        this.destinationPath('index.html'), {
+          'title': this.projectTitle
+        }
+      );
+    },
+
+    script: function() {
+      this.fs.copyTpl(
+        this.templatePath('script.js'),
+        this.destinationPath('script.js'), {
+          'title': this.projectTitle
+        }
+      );
+    },
+
+    style: function() {
+      this.fs.copyTpl(
+        this.templatePath('style.css'),
+        this.destinationPath('style.css')
+      );
+    },
+  },
 
   install: function() {
-    var dependencies = ['browser-sync', 'onchange', 'npm-run-all',
-                        'postcss-cli', 'autoprefixer', 'browserify',
-                        'less', 'less-plugin-clean-css' ];
+    var dependencies = [
+      'browser-sync', 'onchange', 'npm-run-all', 'browserify',
+      'postcss-cli', 'autoprefixer', 'postcss-simple-vars', 
+      'postcss-mixins', 'postcss-nested'
+    ];
+
     this.npmInstall(
       dependencies,
       {

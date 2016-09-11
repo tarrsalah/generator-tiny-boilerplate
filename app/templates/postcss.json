@@ -1,0 +1,8 @@
+{
+  "autoprefixer": {
+    "browsers": "> 5%"
+  },
+  "postcss-simple-vars",
+  "postcss-mixins",
+  "postcss-nested"
+}
