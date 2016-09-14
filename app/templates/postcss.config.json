@@ -2,7 +2,9 @@
   "use": [
     "postcss-mixins",
     "postcss-simple-vars",
-    "postcss-nested"
+    "postcss-nested",
+    "autoprefixer",
+    "cssnano"
   ],
   "autoprefixer": {
     "browsers": "> 5%"

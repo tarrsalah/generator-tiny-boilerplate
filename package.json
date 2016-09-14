@@ -1,6 +1,6 @@
 {
   "name": "generator-tiny-boilerplate",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Tiny html/css/(javascript*) boilerplate generator.",
   "main": "app/index.js",
   "author": "Taouririt Salah Eddine <tarrsalah@gmail.com>",

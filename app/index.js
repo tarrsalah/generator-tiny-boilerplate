@@ -59,8 +59,8 @@ module.exports  = generator.Base.extend({
 
     postCcss: function() {
       this.fs.copyTpl(
-        this.templatePath('postcss.json'),
-        this.destinationPath('postcss.json')
+        this.templatePath('postcss.config.json'),
+        this.destinationPath('postcss.config.json')
       );
     },
 
@@ -121,7 +121,7 @@ module.exports  = generator.Base.extend({
   install: function() {
     var dependencies = [
       'browser-sync', 'onchange', 'npm-run-all', 'browserify',
-      'postcss-cli', 'autoprefixer', 'postcss-simple-vars', 
+      'postcss-cli', 'autoprefixer', 'postcss-simple-vars',
       'postcss-mixins', 'postcss-nested'
     ];
 
