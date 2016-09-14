@@ -122,7 +122,7 @@ module.exports  = generator.Base.extend({
     var dependencies = [
       'browser-sync', 'onchange', 'npm-run-all', 'browserify',
       'postcss-cli', 'autoprefixer', 'postcss-simple-vars',
-      'postcss-mixins', 'postcss-nested'
+      'postcss-mixins', 'postcss-nested', 'cssnano'
     ];
 
     this.npmInstall(
